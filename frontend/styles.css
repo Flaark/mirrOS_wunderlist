@@ -1,0 +1,19 @@
+#wunderlist_list {
+	font-size: 10pt;
+	margin-left: 10px;
+}
+
+#wunderlist_table {
+	margin-top: -10px;
+	padding-top: 0px;
+}
+
+#wunderlist_table td {
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 2px;
+}
+
+#wunderlist_table i {
+	padding-right: 10px;
+}

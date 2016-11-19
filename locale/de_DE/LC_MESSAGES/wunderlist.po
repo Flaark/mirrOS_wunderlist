@@ -1,0 +1,72 @@
+# mirr.OS Wunderlist Module v1.0.0
+# Copyright (C) 2016
+# Marco Roth <mr@glancr.de>, 2016
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mirr.OS Wunderlist Module V1.0\n"
+"POT-Creation-Date: 2016-05-07 11:02+0200\n"
+"PO-Revision-Date: 2016-11-19 01:17+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.11\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Last-Translator: Marco Roth <mr@glancr.de>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: de_DE\n"
+
+msgid "wunderlist_title"
+msgstr "Wunderlist"
+
+msgid "wunderlist_description"
+msgstr "Zeigt deine Aufgaben einer Wunderlist auf deinem Spiegel an"
+
+msgid "wunderlist_select_list"
+msgstr "Bitte Liste auswählen:"
+
+msgid "wunderlist_include_completed"
+msgstr "Zeige abgeschlossene Aufgaben:"
+
+msgid "wunderlist_include_completed_yes"
+msgstr "Ja"
+
+msgid "wunderlist_include_completed_no"
+msgstr "Nein"
+
+msgid "wunderlist_more_tasks"
+msgstr "weitere Aufgaben"
+
+msgid "wunderlist_client_id"
+msgstr "Wunderlist Client ID"
+
+msgid "wunderlist_access_token"
+msgstr "Wunderlist Access Token"
+
+msgid "wunderlist_get_keys"
+msgstr "Auf dieser Seite könnt Ihr eure Schlüssel generieren:"
+
+msgid "wunderlist_sort"
+msgstr "Sortieren nach:"
+
+msgid "wunderlist_sort_alphabetical"
+msgstr "A-Z (nach Titel)"
+
+msgid "wunderlist_sort_alphabetical_reverse"
+msgstr "Z-A (nach Titel)"
+
+msgid "wunderlist_sort_oldest"
+msgstr "Älteste-Neuste"
+
+msgid "wunderlist_sort_newest"
+msgstr "Neuste-Älteste"
+
+msgid "wunderlist_sort_starred"
+msgstr "Mit Stern markierte zuerst"
+
+msgid "wunderlist_max_tasks"
+msgstr "Anzahl Aufgaben anzeigen"
+
+msgid "wunderlist_save"
+msgstr "Speichern"
