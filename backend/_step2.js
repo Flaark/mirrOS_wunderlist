@@ -13,8 +13,10 @@ $(document).ready(function() {
 		method: 'GET',
 		dataType: 'json',
 		success: function(data){
+			console.log(data);
 			$.each(data, function(index, el) {
-				$("#wunderlist_lists").append("<option value='"+el.id+"'>"+el.title+"</option>");
+				$("#wunderlist_lists").append("<option value='" + el.id + "'>" + el.title + "</option>");
+				console.log(el.title);
 			});
 			$("#wunderlist_lists").val(list);
 		}

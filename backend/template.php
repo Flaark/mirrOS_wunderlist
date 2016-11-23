@@ -6,6 +6,7 @@
 	$wunderlist_include_completed = getConfigValue('wunderlist_include_completed');
 	$wunderlist_sort = getConfigValue('wunderlist_sort');
 	$wunderlist_max_tasks = getConfigValue('wunderlist_max_tasks');
+	$wunderlist_max_tasks_completed = getConfigValue('wunderlist_max_tasks_completed');
 
 	if($wunderlist_access_token == 'GLANCR_DEFAULT') {$wunderlist_access_token = ''; }
 	if($wunderlist_client_id == 'GLANCR_DEFAULT') {$wunderlist_client_id = ''; }
@@ -13,6 +14,7 @@
 	if($wunderlist_include_completed == 'GLANCR_DEFAULT') {$wunderlist_include_completed = 'false'; }
 	if($wunderlist_sort == 'GLANCR_DEFAULT') {$wunderlist_sort = 'alphabetical'; }
 	if($wunderlist_max_tasks == 'GLANCR_DEFAULT') {$wunderlist_max_tasks = '8'; }
+	if($wunderlist_max_tasks_completed == 'GLANCR_DEFAULT') {$wunderlist_max_tasks = '0'; }
 
 	if ($wunderlist_client_id == "" || $wunderlist_access_token == ""){
 		include "_step1.php";

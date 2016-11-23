@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mirr.OS Wunderlist Module V1.0\n"
 "POT-Creation-Date: 2016-05-07 11:02+0200\n"
-"PO-Revision-Date: 2016-11-19 01:21+0100\n"
+"PO-Revision-Date: 2016-11-23 21:54+0100\n"
 "Last-Translator: Marco Roth <mr@glancr.de>\n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -67,6 +67,9 @@ msgstr "sort by starred (starred first)"
 
 msgid "wunderlist_max_tasks"
 msgstr "max amount of tasks"
+
+msgid "wunderlist_max_tasks_completed"
+msgstr "amount of completed tasks"
 
 msgid "wunderlist_save"
 msgstr "Save Settings"
