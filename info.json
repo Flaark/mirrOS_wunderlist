@@ -1,10 +1,10 @@
 {
 	"module": {
 		"name": "Wunderlist",
-		"version": "1.0.1",
+		"version": "1.0.2",
 		"description": "Zeigt deine Aufgaben aus einer Wunderlist an",
 		"module_url": "https://glancr.de/module/produktivitaet/wunderlist/",
-		"download_url": "https://api.glancr.de/update/moduleZips/wunderlist-1.0.1.zip",
+		"download_url": "https://api.glancr.de/update/moduleZips/wunderlist-1.0.2.zip",
 		"category": "produktivitaet",
 		"release_date": "2016-11-18",
 		"last_update": "2017-01-18"
