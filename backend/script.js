@@ -8,6 +8,7 @@ $('.wunderlist__edit--button').click(function() {
 	$.post('/config/setConfigValueAjax.php', {'key' : 'wunderlist_sort', 'value' : $("#wunderlist_sort").val()}).done(function() {
 		$('#ok').show(30, function() {
 			$(this).hide('slow');
+			location.reload();
 		})
 	});
 });
