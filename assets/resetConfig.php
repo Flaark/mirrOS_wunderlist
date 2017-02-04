@@ -9,6 +9,7 @@
 	setConfigValue("wunderlist_max_tasks", "");
 	setConfigValue("wunderlist_max_tasks_completed", "");
 	setConfigValue("wunderlist_sort", "");
+	setConfigValue("reload", "1");
 
 
 	header("location: /config/");
