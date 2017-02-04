@@ -21,7 +21,7 @@
 
 <input id="wunderlist_max_tasks_completed" type="number" step="1" min="1" max="8" placeholder="<?php echo _('wunderlist_max_tasks_completed');?>" value="<?php echo $wunderlist_max_tasks_completed; ?>"/>
 
-<a href="/modules/wunderlist/assets/resetConfig.php">Reset Config</a><br /><br />
+<a href="/modules/wunderlist/assets/reset.php">Reset Config</a><br /><br />
 
 <script>
 	<?php include "_step2.js"; ?>
