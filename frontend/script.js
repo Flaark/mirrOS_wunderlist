@@ -49,7 +49,7 @@ function reloadWunderlist() {
 
 			if (i < wunderlist_max_tasks) {
 				$("#wunderlist_table").append("<tr></tr>");
-				if (el.completed == true){ icon = "fa fa-check-square-o"; } else { icon = "fa fa-square-o";	}
+				if (el.completed == true){ icon = "fa fa-check"; } else { icon = "fa fa-circle";	}
 
 				if (el.starred == true) {
 					star = '<i class="fa fa-star" aria-hidden="true"></i>';
@@ -77,7 +77,7 @@ function reloadWunderlist() {
 						star = '<i class="fa fa-star" aria-hidden="true"></i>';
 					} else { star = ""; }
 
-					$("#wunderlist_table tr:last").append("<td><i class='" + "fa fa-check-square-o" + "' aria-hidden='true'></i></td><td>" + star + el.title + "</td>");
+					$("#wunderlist_table tr:last").append("<td><i class='" + "fa fa-check" + "' aria-hidden='true'></i></td><td>" + star + el.title + "</td>");
 				}
 				i++;
 			});
@@ -89,7 +89,6 @@ function reloadWunderlist() {
 			}
 		 }});
 	 }});
-
 
   // alle 10 Minuten aktualiseren
   window.setTimeout(function() {
