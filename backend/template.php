@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+
 <?php
 
 	$wunderlist_access_token = getConfigValue('wunderlist_access_token');
@@ -7,6 +9,8 @@
 	$wunderlist_sort = getConfigValue('wunderlist_sort');
 	$wunderlist_max_tasks = getConfigValue('wunderlist_max_tasks');
 	$wunderlist_max_tasks_completed = getConfigValue('wunderlist_max_tasks_completed');
+	$wunderlist_icons = getConfigValue('wunderlist_icons');
+	$wunderlist_include_other_tasks = getConfigValue('wunderlist_include_other_tasks');
 
 	if($wunderlist_access_token == 'GLANCR_DEFAULT') {$wunderlist_access_token = ''; }
 	if($wunderlist_client_id == 'GLANCR_DEFAULT') {$wunderlist_client_id = ''; }
@@ -15,6 +19,8 @@
 	if($wunderlist_sort == 'GLANCR_DEFAULT') {$wunderlist_sort = 'alphabetical'; }
 	if($wunderlist_max_tasks == 'GLANCR_DEFAULT') {$wunderlist_max_tasks = '8'; }
 	if($wunderlist_max_tasks_completed == 'GLANCR_DEFAULT') {$wunderlist_max_tasks = '0'; }
+	if($wunderlist_icons == 'GLANCR_DEFAULT') {$wunderlist_icons = 'new'; }
+	if($wunderlist_include_other_tasks == 'GLANCR_DEFAULT') {$wunderlist_include_other_tasks = 'true'; }
 
 	if ($wunderlist_client_id == "" || $wunderlist_access_token == ""){
 		include "_step1.php";

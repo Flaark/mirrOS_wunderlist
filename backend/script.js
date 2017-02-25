@@ -5,6 +5,8 @@ $('.wunderlist__edit--button').click(function() {
 	$.post('/config/setConfigValueAjax.php', {'key' : 'wunderlist_include_completed', 'value' : $("#wunderlist_include_completed").val()});
 	$.post('/config/setConfigValueAjax.php', {'key' : 'wunderlist_max_tasks', 'value' : $("#wunderlist_max_tasks").val()});
 	$.post('/config/setConfigValueAjax.php', {'key' : 'wunderlist_max_tasks_completed', 'value' : $("#wunderlist_max_tasks_completed").val()});
+	$.post('/config/setConfigValueAjax.php', {'key' : 'wunderlist_include_other_tasks', 'value' : $("#wunderlist_include_other_tasks").val()});
+	$.post('/config/setConfigValueAjax.php', {'key' : 'wunderlist_icons', 'value' : $("input[name=wunderlist_icons]:checked").val()});
 	$.post('/config/setConfigValueAjax.php', {'key' : 'wunderlist_sort', 'value' : $("#wunderlist_sort").val()}).done(function() {
 		$('#ok').show(30, function() {
 			$(this).hide('slow');

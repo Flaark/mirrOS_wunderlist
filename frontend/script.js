@@ -4,6 +4,8 @@ var wunderlist_list;
 var wunderlist_list_name;
 var wunderlist_max_tasks;
 var wunderlist_max_tasks_completed;
+var wunderlist_icons;
+var wunderlist_include_other_tasks;
 
 $(document).ready(function () {
 	wunderlist_access_token = "<?php echo getConfigValue('wunderlist_access_token'); ?>";
@@ -13,6 +15,8 @@ $(document).ready(function () {
 	wunderlist_sort = "<?php echo getConfigValue('wunderlist_sort'); ?>"
 	wunderlist_max_tasks = parseInt("<?php echo getConfigValue('wunderlist_max_tasks'); ?>")
 	wunderlist_max_tasks_completed = parseInt("<?php echo getConfigValue('wunderlist_max_tasks_completed'); ?>")
+	wunderlist_icons = "<?php echo getConfigValue('wunderlist_icons'); ?>"
+	wunderlist_include_other_tasks = "<?php echo getConfigValue('wunderlist_include_other_tasks'); ?>"
 	reloadWunderlist();
 });
 
@@ -44,12 +48,24 @@ function reloadWunderlist() {
 			data.sort(sort_by('starred', true));
 		}
 
+		if (wunderlist_icons == "new") {
+			done_icon = "fa fa-check";
+			open_icon = "fa fa-circle";
+		} else {
+			done_icon = "fa fa-check-square-o";
+			open_icon = "fa fa-square-o";
+		}
+
+		if (wunderlist_include_other_tasks == "true" && wunderlist_max_tasks == 8) {
+			wunderlist_max_tasks -= 1;
+		}
+
     i = 0;
 		$.each(data, function(index, el) {
 
 			if (i < wunderlist_max_tasks) {
 				$("#wunderlist_table").append("<tr></tr>");
-				if (el.completed == true){ icon = "fa fa-check"; } else { icon = "fa fa-circle";	}
+				if (el.completed == true){ icon = done_icon; } else { icon = open_icon;	}
 
 				if (el.starred == true) {
 					star = '<i class="fa fa-star" aria-hidden="true"></i>';
@@ -58,7 +74,9 @@ function reloadWunderlist() {
 				$("#wunderlist_table tr:last").append("<td><i class='" + icon + "' aria-hidden='true'></i></td><td>" + star + el.title + "</td>");
 
 			} else if (i == (wunderlist_max_tasks+1)) {
-				more_tasks = "<td><i class='fa fa-info-circle' aria-hidden='true'></i></td><td>" + (data.length-wunderlist_max_tasks)+ " <?php echo _('wunderlist_more_tasks'); ?></td>";
+				if (wunderlist_include_other_tasks == "true") {
+					more_tasks = "<td><i class='fa fa-info-circle' aria-hidden='true'></i></td><td>" + (data.length-wunderlist_max_tasks)+ " <?php echo _('wunderlist_more_tasks'); ?></td>";
+				}
 			}
 			i++;
 		});
@@ -77,7 +95,7 @@ function reloadWunderlist() {
 						star = '<i class="fa fa-star" aria-hidden="true"></i>';
 					} else { star = ""; }
 
-					$("#wunderlist_table tr:last").append("<td><i class='" + "fa fa-check" + "' aria-hidden='true'></i></td><td>" + star + el.title + "</td>");
+					$("#wunderlist_table tr:last").append("<td><i class='" + done_icon + "' aria-hidden='true'></i></td><td>" + star + el.title + "</td>");
 				}
 				i++;
 			});

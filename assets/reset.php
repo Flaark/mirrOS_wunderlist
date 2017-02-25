@@ -1,3 +1,17 @@
+<?php
+
+	include('../../../config/glancrConfig.php');
+
+	$language = getConfigValue('language');
+
+	putenv("LANG=$language");
+	setlocale(LC_ALL, "$language.UTF-8");
+	bindtextdomain('wunderlist', GLANCR_ROOT ."/modules/wunderlist/locale");
+	textdomain('wunderlist');
+	bind_textdomain_codeset('wunderlist', 'UTF-8');
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +21,8 @@
 	<link rel="stylesheet" type="text/css" href="/config/css/main.css">
 	<link rel="stylesheet" href="/config/bower_components/foundation-icon-fonts/foundation-icons.css" media="screen" title="no title" charset="utf-8">
 </head>
-<body>
 
+<body>
 	<header class="expanded row">
 		<div class="small-12 columns site__title">
 			<div class="row">
@@ -23,16 +37,15 @@
 		</div>
 	</header>
 
-
 	<main class="container">
 		<section>
 			<div class="row">
 				<div class="small-12 columns">
 
-					<h3>Wunderlist</h3>
+					<h3><?php echo _('wunderlist_title');?></h3>
 
 					<p>
-						Are you sure you want to reset your Wunderlist conifg?
+						<?php echo _("wunderlist_reset_config_message"); ?>
 					</p><br /><br />
 
 					<a class="button expanded" href="/config/">No</a>
@@ -41,12 +54,6 @@
 				</div>
 			</div>
 		</section>
-
 	</main>
-	<footer>
-
-	</footer>
-
-
 </body>
 </html>

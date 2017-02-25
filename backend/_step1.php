@@ -3,4 +3,4 @@
 
 <?php echo _('wunderlist_get_keys');?> <a href="https://developer.wunderlist.com/apps/new" target="_blank">Link</a><br><br>
 
-<a href="/modules/wunderlist/assets/reset.php">Reset Config</a><br /><br />
+<a href="/modules/wunderlist/assets/reset.php"><?php echo _('wunderlist_reset_config');?></a><br /><br />

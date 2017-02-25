@@ -21,7 +21,20 @@
 
 <input id="wunderlist_max_tasks_completed" type="number" step="1" min="1" max="8" placeholder="<?php echo _('wunderlist_max_tasks_completed');?>" value="<?php echo $wunderlist_max_tasks_completed; ?>"/>
 
-<a href="/modules/wunderlist/assets/reset.php">Reset Config</a><br /><br />
+<select id="wunderlist_include_other_tasks">
+	<option value="" disabled><?php echo _('wunderlist_include_other_tasks');?></option>
+	<option value="false" <?php if ($wunderlist_include_other_tasks == "false"){ echo "selected"; } ?>><?php echo _('wunderlist_include_other_tasks_no');?></option>
+	<option value="true"  <?php if ($wunderlist_include_other_tasks == "true") { echo "selected"; } ?>><?php echo _('wunderlist_include_other_tasks_yes');?></option>
+</select>
+
+<h6><?php echo _('wunderlist_icons');?></h6>
+<input type="radio" name="wunderlist_icons" value="old" id="wunderlist_icons_new" <?php if ($wunderlist_icons == "old"){ echo "checked"; } ?>>
+<label for="wunderlist_icons_new"><?php echo _('wunderlist_icons_old');?> <i class="fa fa-square-o" style="margin-left: 10px"></i> <i class="fa fa-check-square-o"></i></label><br>
+
+<input type="radio" name="wunderlist_icons" value="new" id="wunderlist_icons_old" <?php if ($wunderlist_icons == "new"){ echo "checked"; } ?>>
+<label for="wunderlist_icons_old"><?php echo _('wunderlist_icons_new');?> <i class="fa fa-circle"></i> <i class="fa fa-check"></i></label><br><br />
+
+<a href="/modules/wunderlist/assets/reset.php"><?php echo _('wunderlist_reset_config');?></a><br /><br />
 
 <script>
 	<?php include "_step2.js"; ?>

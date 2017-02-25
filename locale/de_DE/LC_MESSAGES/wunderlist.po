@@ -1,17 +1,17 @@
-# mirr.OS Wunderlist Module v1.0.0
-# Copyright (C) 2016
-# Marco Roth <mr@glancr.de>, 2016
+# mirr.OS Wunderlist Module v1.1.0
+# Copyright (C) 2017
+# Marco Roth <mr@glancr.de>, 2017
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: mirr.OS Wunderlist Module V1.0\n"
+"Project-Id-Version: mirr.OS Wunderlist Module V1.1.0\n"
 "POT-Creation-Date: 2016-05-07 11:02+0200\n"
-"PO-Revision-Date: 2016-11-23 21:54+0100\n"
+"PO-Revision-Date: 2017-02-25 20:13+0100\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 1.8.11\n"
+"X-Generator: Poedit 1.8.12\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "Last-Translator: Marco Roth <mr@glancr.de>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -70,6 +70,30 @@ msgstr "Anzahl Aufgaben anzeigen"
 
 msgid "wunderlist_max_tasks_completed"
 msgstr "Anzahl der letzten abgeschlossenen Aufgaben"
+
+msgid "wunderlist_include_other_tasks"
+msgstr "Zeige Info mit 'X weitere Aufgaben'"
+
+msgid "wunderlist_include_other_tasks_no"
+msgstr "Nein"
+
+msgid "wunderlist_include_other_tasks_yes"
+msgstr "Ja"
+
+msgid "wunderlist_icons"
+msgstr "Wunderlist Aufgaben Icons"
+
+msgid "wunderlist_icons_old"
+msgstr "Alte Icons"
+
+msgid "wunderlist_icons_new"
+msgstr "Neue Icons"
+
+msgid "wunderlist_reset_config"
+msgstr "Einstellungen zurücksetzten"
+
+msgid "wunderlist_reset_config_message"
+msgstr "Bist du sicher, dass du deine Wunderlist Einstellungen zurücksetzten möchtest?"
 
 msgid "wunderlist_save"
 msgstr "Speichern"
