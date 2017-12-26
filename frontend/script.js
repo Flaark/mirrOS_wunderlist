@@ -6,6 +6,7 @@ var wunderlist_max_tasks;
 var wunderlist_max_tasks_completed;
 var wunderlist_icons;
 var wunderlist_include_other_tasks;
+var wunderlist_more_tasks = "";
 
 $(document).ready(function () {
 	wunderlist_access_token = "<?php echo getConfigValue('wunderlist_access_token'); ?>";
@@ -22,12 +23,12 @@ $(document).ready(function () {
 
 function reloadWunderlist() {
 
-  $.ajax({ url: 'https://a.wunderlist.com/api/v1/lists/' + wunderlist_list, headers: { 'X-Client-ID': wunderlist_client_id, 'X-Access-Token': wunderlist_access_token }, success: function(data){
-    list_name = data.title;
-    $("#wunderlist_list").text(list_name);
+	$.ajax({ url: "/modules/wunderlist/assets/lists.php", success: function(data){
+		list = data.filter(function(l) { return l.id == wunderlist_list; })[0];
+    $("#wunderlist_list").text(list.title);
   }});
 
-	$.ajax({ url: 'https://a.wunderlist.com/api/v1/tasks?list_id=' + wunderlist_list + '&completed=' + wunderlist_inlcude_completed, headers: { 'X-Client-ID': wunderlist_client_id, 'X-Access-Token': wunderlist_access_token }, success: function(data){
+	$.ajax({ url: "/modules/wunderlist/assets/tasks.php", success: function(data){
 
 		$("#wunderlist_table").empty();
 
@@ -75,21 +76,21 @@ function reloadWunderlist() {
 
 			} else if (i == (wunderlist_max_tasks+1)) {
 				if (wunderlist_include_other_tasks == "true") {
-					more_tasks = "<td><i class='fa fa-info-circle' aria-hidden='true'></i></td><td>" + (data.length-wunderlist_max_tasks)+ " <?php echo _('wunderlist_more_tasks'); ?></td>";
+					wunderlist_more_tasks = "<td><i class='fa fa-info-circle' aria-hidden='true'></i></td><td>" + (data.length-wunderlist_max_tasks)+ " <?php echo _('wunderlist_more_tasks'); ?></td>";
 				}
 			}
 			i++;
 		});
 
-		$.ajax({ url: 'https://a.wunderlist.com/api/v1/tasks?list_id=' + wunderlist_list + '&completed=' + true, headers: { 'X-Client-ID': wunderlist_client_id, 'X-Access-Token': wunderlist_access_token }, success: function(data){
+		$.ajax({ url: "/modules/wunderlist/assets/tasks.php?completed=true", success: function(data){
 
 			data.sort(sort_by('completed_at', true));
 
 			i = 0;
 			$.each(data, function(index, el) {
-				$("#wunderlist_table").append("<tr></tr>");
 
 				if (i < wunderlist_max_tasks_completed) {
+					$("#wunderlist_table").append("<tr></tr>");
 
 					if (el.starred == true) {
 						star = '<i class="fa fa-star" aria-hidden="true"></i>';
@@ -101,9 +102,9 @@ function reloadWunderlist() {
 			});
 
 			// 	Ausgabe: X weitere Aufgaben
-			if (more_tasks != ""){
+			if (wunderlist_more_tasks != ""){
 				$("#wunderlist_table").append("<tr></tr>");
-				$("#wunderlist_table tr:last").append(more_tasks);
+				$("#wunderlist_table tr:last").append(wunderlist_more_tasks);
 			}
 		 }});
 	 }});
