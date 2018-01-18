@@ -1,0 +1,99 @@
+# mirr.OS Wunderlist Module v1.1.0
+# Copyright (C) 2017
+# Marco Roth <mr@glancr.de>, 2017
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mirr.OS Wunderlist Module V1.1.0\n"
+"POT-Creation-Date: 2016-05-07 11:02+0200\n"
+"PO-Revision-Date: 2018-01-18 18:43+0100\n"
+"Last-Translator: Tobias Grasse <tg@glancr.de>\n"
+"Language-Team: \n"
+"Language: ja_JP\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.6\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+msgid "wunderlist_title"
+msgstr "Wunderlist"
+
+msgid "wunderlist_description"
+msgstr "このモジュールはWunderlistからあなたのタスクを表示します"
+
+msgid "wunderlist_select_list"
+msgstr "Wunderlistを選択:"
+
+msgid "wunderlist_include_completed"
+msgstr "終了したタスクを表示:"
+
+msgid "wunderlist_include_completed_yes"
+msgstr "Yes"
+
+msgid "wunderlist_include_completed_no"
+msgstr "No"
+
+msgid "wunderlist_more_tasks"
+msgstr "その他のタスク"
+
+msgid "wunderlist_client_id"
+msgstr "Wunderlist ID"
+
+msgid "wunderlist_access_token"
+msgstr "Wunderlist アクセストークン"
+
+msgid "wunderlist_get_keys"
+msgstr "ここであなたのキーを入手できます :"
+
+msgid "wunderlist_sort"
+msgstr "並べ替え:"
+
+msgid "wunderlist_sort_alphabetical"
+msgstr "アルファベット順に並べる"
+
+msgid "wunderlist_sort_alphabetical_reverse"
+msgstr "アルファベット逆順に並べる"
+
+msgid "wunderlist_sort_oldest"
+msgstr "作成日順に並べ替え（古い順）"
+
+msgid "wunderlist_sort_newest"
+msgstr "作成日順に並べ替え（新しい順）"
+
+msgid "wunderlist_sort_starred"
+msgstr "優先順位順に並べ替え（スターを付けた順番）"
+
+msgid "wunderlist_max_tasks"
+msgstr "タスクの最大量"
+
+msgid "wunderlist_max_tasks_completed"
+msgstr "完了したタスクの最大量"
+
+msgid "wunderlist_include_other_tasks"
+msgstr "'X other tasks'で情報を表示する"
+
+msgid "wunderlist_include_other_tasks_no"
+msgstr "No"
+
+msgid "wunderlist_include_other_tasks_yes"
+msgstr "Yes"
+
+msgid "wunderlist_icons"
+msgstr "Wunderlist アイコン"
+
+msgid "wunderlist_icons_old"
+msgstr "古いアイコン"
+
+msgid "wunderlist_icons_new"
+msgstr "新しいアイコン"
+
+msgid "wunderlist_reset_config"
+msgstr "設定をリセットする"
+
+msgid "wunderlist_reset_config_message"
+msgstr "Wunderlistの設定をリセットしてもよろしいですか？"
+
+msgid "wunderlist_save"
+msgstr "設定を保存"
